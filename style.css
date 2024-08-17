@@ -72,11 +72,11 @@ nav ul li a {
 nav ul li a::after {
     content: '';
     width: 0;
-    height: 2.5px;
+    height: 2px;
     background: #004cff;
     position: absolute;
     left: 0;
-    bottom: 0.5px;
+    bottom: 0.1px;
     transition: width 0.3s ease;
 }
 
