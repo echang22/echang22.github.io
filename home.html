@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website Draft</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ee11332e83.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100, 200, 300, 400" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="Images/cv_placeholder.pdf" target="_blank">Resume</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Programmer | Designer | Web Developer</p>
+                    <h1><span>Ethan Chang</span>
+                    </h1>
+                    <h2>DS/CS @ UC Berkeley</h2>
+                    <div class="social-icons-header">
+                        <a href="https://linkedin.com/in/ethan-chang2/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------about---------->      
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <h1 class="sub-title">A Little About Me...</h1>
+                        <p><br>
+                            I am currently a Junior at UC Berkeley studying Data Science (business analytics emphasis) and Computer Science. 
+                            I am heavily interested in exploring ways that social science and business intersects with technology and software to 
+                            better the world! I enjoy graphic and web design, photography and pencil sketching :) 
+
+                            
+                            
+                        </p>
+                    </div>
+                    <div class="about-col-2">
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('exp')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing interfaces</li>
+                                <li><span>Web development</span><br>Designing interfaces</li>
+                                <li><span>App Developemtn</span><br>Designing interfaces</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="exp">
+                            <ul>
+                                <li><span>2020 - Current </span><br>Design training</li>
+                                <li><span>2019 - 2019</span><br>aljsdfljasdlf</li>
+                                <li><span>20209 - 20923093</span><br>lasdjflkajdf</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>Designing</li>
+                                <li><span>2021</span><br>asdfasdf butt</li>
+                                <li><span>2022</span><br>Designing sasdfsafd</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="interests">
+                            <ul>
+                                <li><span>Graphic Design</span><br>Web Design</li>
+                                <li><span>Photography</span><br>Rough Sketching</li>
+                                <li><span>Social Good</span><br>Business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------Experience-------------------->
+        <div id="experience">
+            <div class="container">
+                <h1 class="sub-title">Experience</h1>
+
+                <div class="exp-wrap">
+                    <div class="exp-col-left">
+                        <img src="Images/berkeleydiscovery.png">
+                    </div>
+                    <div class="exp-col-right">
+                        <h2>Database Assistant</h2>
+                        <p>@ Berkeley Discovery Initiative | Feb 2024 - Present</p><br>
+                        <li>Analyze and manage 1200+ listings</li>
+                        <li>Boosted database usage by 50%</li>
+                        <li>Updated for 6500+ users</li>
+                    </div>
+                </div>
+                <div class="exp-wrap">
+                    <div class="exp-col-left">
+                        <img src="Images/ighotaLogo copy.jpg">
+                    </div>
+                    <div class="exp-col-right">
+                        <h2>Chief Technology Officer</h2>
+                        <p>@ Ighota! Virtual Learning | June 2024 - Present</p><br>
+                        <li>Closely maintain communication with our eight educators</li>
+                        <li>Designed and programmed new website for 2024 launch</li>
+                        <li>Previously VP since June 2021, transitioning to overseeing technology operations</li>
+                    </div>
+                </div>
+                <div class="exp-wrap">
+                    <div class="exp-col-left">
+                        <img src="Images/innod2.png">
+                    </div>
+                    <div class="exp-col-right">
+                        <h2>Web Developer & Designer</h2>
+                        <p>@ Innovative Design at Berkeley | Sep 2023 - May 2024</p><br>
+                        <li>Designed graphic UX redesigns of Berkeley Undergraduate website</li>
+                        <li>Created mobile application version of the website</li>
+                        <li>Worked to translate mock-ups into functional web pages for ClinicConnects</li>
+                    </div>
+                </div>
+                <div class="exp-wrap">
+                    <div class="exp-col-left">
+                        <img src="Images/tasaLogo.png">
+                    </div>
+                    <div class="exp-col-right">
+                        <h2>Web Officer</h2>
+                        <p>@ Taiwanese American Student Association | Dec 2022 - Dec 2023</p><br>
+                        <li>Debugged Linux server issues and clean database</li>
+                        <li>Programmed interactive website features</li>
+                        <li>Monitor website traffic to drive decision making</li>
+                    </div>
+                </div>
+                    
+                <!--
+                <div class="experience-list">
+                    <div>
+                        <h2>Database Assistant</h2>
+                        <p>@ Berkeley Discovery Initiative | Feb 2024 - Present</p><br>
+                        <li>Analyze and manage 1200+ listings</li>
+                        <li>Boosted database usage by 50%</li>
+                        <li>Updated for 6500+ users</li>
+                    </div>
+                -->
+
+            </div>
+        </div>
+
+
+        <!---------------Portfolio---------------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Projects</h1>
+                <!--Actual project descriptions-->
+                <div class="experience-list">
+                    <div>
+                        <i class="fa-sharp fa-solid fa-crop"></i>
+                        <h2>Ighota! Website Redesign</h2>
+                        <p>HTML | CSS | JavaScript | jQuery | React.js</p><br>
+                        <li>Created Figma website redesigns</li>
+                        <li>Applied HTML, CSS, JavaScript</li>
+                        <li>Hosting all videos from our educators</li>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <h2>Outreach Data Analysis</h2>
+                        <p>Python | Pandas | JupyterLab</p><br>
+                        <li>Analyzed user frequency and activity</li>
+                        <li>Utilized EDA through data modeling</li>
+                        <li>Standardized methodology for admin</li>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>2D-World Game</h2>
+                        <p>Java</p><br>
+                        <li>Java data algorithms</li>
+                        <li>Engaging UI</li>
+                        <li>Unique user encounters</li>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-laptop"></i>
+                        <h2>Email Binary Classifier</h2>
+                        <p>Python | Pandas | Sklearn</p><br>
+                        <li>Modeled feature engineering</li>
+                        <li>Utilized Sklearn</li>
+                        <li>86% Training Accuracy</li>
+                    </div>
+                </div>
+
+                <!--Photography title break-->
+                <div class="photography-title">
+                    <br><br><h2>Recent Photography</h2>
+                </div>
+
+                <!--Designs/photos to display-->
+                <div class="work-list">
+                    <div class="work">
+                        <img src="Images/peaksky.jpeg">
+                        <div class="layer">
+                            <h3><i class="fa-solid fa-location-pin"></i> Grizzly Peak, Berkeley, CA</h3>
+                            <p>04/2024</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Images/carmelphoto.jpeg">
+                        <div class="layer">
+                            <h3><i class="fa-solid fa-location-pin"></i> Carmel By the Sea, CA</h3>
+                            <p>02/2024</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Images/taiwan.jpg">
+                        <div class="layer">
+                            <h3><i class="fa-solid fa-location-pin"></i> Tamsui River, TP, Taiwan</h3>
+                            <p>12/2023</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Images/sfflowers.jpg">
+                        <div class="layer">
+                            <h3><i class="fa-solid fa-location-pin"></i> Golden Gate Park, SF, CA</h3>
+                            <p>08/2023</p>
+                            <!--<a href='#'><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                            this was the old arrow symbol to link somewhere-->
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <a href="#" class="btn">See More</a>
+                -->
+            </div>
+        </div>
+
+
+        <!------------Contact-------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me!</h1>
+                        <p>Feel free to send me a message about any opportunities, questions, or
+                            if you want to connect or click below for a copy of my resume.
+                        </p>
+                        <p><i class="fa-solid fa-paper-plane"></i> echang22@berkeley.edu</p> 
+                        <!--icon to send you back to the top of page-->
+                        <a href="#header">
+                            <p><i class="fa-solid fa-arrow-up"></i> Back to Top</p>
+                        </a>
+                    </div>
+
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Full Name" required>
+                            <input type="email" name="Email" placeholder="Email" required>
+                            <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Made by Ethan Chang</p>
+            </div>
+        </div>
+
+        <!-----------To hide and show the information for the skills, education, and experience tabs-------->
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+        
+        <!-----------To open and close the menu bar on phones------------>
+        <script>
+            
+            var sidemenu = document.getElementById("sidemenu");
+            
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+            
+        </script>
+
+        <!--------Script received from https://github.com/jamiewilson/form-to-google-sheets to send submitted info from website to a google sheet-->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxo49ekEfg4yCmphhE9Gx8qSb8vrBW8-BTAuHH9B8D0pCsl_6PoB5ETJ_FaanAFaCp2Pg/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000) 
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+    </body>
+</html>
