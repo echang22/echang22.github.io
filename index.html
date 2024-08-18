@@ -4,33 +4,41 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Website Draft</title>
+        <title>Ethan's Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/ee11332e83.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100, 200, 300, 400" rel="stylesheet">
+        
     </head>
 
     <body>
-        <div id="header">
+        <div id="home">
             <div class="container">
                 <nav>
                     <ul id="sidemenu">
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="Images/cv_placeholder.pdf" target="_blank">Resume</a></li>
+                        <li><a href="Images/copyResume.pdf" target="_blank">Resume</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
-                <div class="header-text">
-                    <p>Programmer | Designer | Web Developer</p>
-                    <h1><span>Ethan Chang</span>
-                    </h1>
-                    <h2>DS/CS @ UC Berkeley</h2>
-                    <div class="social-icons-header">
-                        <a href="https://linkedin.com/in/ethan-chang2/"><i class="fa-brands fa-linkedin"></i></a>
+                <!--Uses about-col css to fix alignment w/ pic + text-->
+                <div class="header-container">
+                    <div class="about-col-1">
+                        <div class="header-text">
+                            <p>Programmer | Designer | Web Developer</p>
+                            <h1><span>Ethan Chang</span>
+                            </h1>
+                            <h2>DS/CS @ UC Berkeley</h2>
+                            <div class="social-icons-header">
+                                <a href="https://linkedin.com/in/ethan-chang2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-col-2">
+                        <img src="Images/portraitphoto.jpeg">
                     </div>
                 </div>
             </div>
@@ -44,47 +52,43 @@
                     <div class="about-col-1">
                         <h1 class="sub-title">A Little About Me...</h1>
                         <p><br>
-                            I am currently a Junior at UC Berkeley studying Data Science (business analytics emphasis) and Computer Science. 
+                            I am currently a Junior at UC Berkeley studying Data Science and Computer Science. 
                             I am heavily interested in exploring ways that social science and business intersects with technology and software to 
                             better the world! I enjoy graphic and web design, photography and pencil sketching :) 
-
-                            
-                            
+                            <br><br>
+                            <p>Feel free to send me an email about any opportunities, questions, or if you want to
+                                keep in touch with the email below:
+                            </p>
+                            <br>
+                            <p><i class="fa-solid fa-paper-plane"></i>echang22@berkeley.edu</p> 
                         </p>
                     </div>
                     <div class="about-col-2">
                         <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('exp')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('knowledge')">Knowledge</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('interests')">Interests</p>
                         </div>
-                        <div class="tab-contents active-tab" id="skills">
+                        <div class="tab-contents active-tab" id="knowledge">
                             <ul>
-                                <li><span>UI/UX</span><br>Designing interfaces</li>
-                                <li><span>Web development</span><br>Designing interfaces</li>
-                                <li><span>App Developemtn</span><br>Designing interfaces</li>
+                                <li><span>Programming</span><br>Python, Java, SQL</li>
+                                <li><span>Design</span><br>Client Designs, Desinging Interfaces, Figma</li>
+                                <li><span>Web Development</span><br>HTML, CSS, JavaScript/jQuery, React.js</li>
+                                <li><span>Data Science</span><br>Pandas, Sklearn, Data Visualizations & Analysis, Machine Learning</li>
                             </ul>
                         </div>
-                        <div class="tab-contents" id="exp">
+                        <div class="tab-contents" id="skills">
                             <ul>
-                                <li><span>2020 - Current </span><br>Design training</li>
-                                <li><span>2019 - 2019</span><br>aljsdfljasdlf</li>
-                                <li><span>20209 - 20923093</span><br>lasdjflkajdf</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2020</span><br>Designing</li>
-                                <li><span>2021</span><br>asdfasdf butt</li>
-                                <li><span>2022</span><br>Designing sasdfsafd</li>
+                                <li><span>Communication</span><br>Strong communication and critical thinking skills in team environments</li>
+                                <li><span>Collaboration</span><br>Integrative leadership with cross-functional teamwork</li>
+                                <li><span>Ambition</span><br>Always striving to learn something new from everyone</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="interests">
                             <ul>
-                                <li><span>Graphic Design</span><br>Web Design</li>
-                                <li><span>Photography</span><br>Rough Sketching</li>
-                                <li><span>Social Good</span><br>Business</li>
+                                <li><span>Graphic Design</span><br>Visual Designing</li>
+                                <li><span>Photography</span><br>Landscape Sketching on the side</li>
+                                <li><span>Social Good</span><br>Business/Entrepreneurship</li>
                             </ul>
                         </div>
                     </div>
@@ -105,9 +109,9 @@
                     <div class="exp-col-right">
                         <h2>Database Assistant</h2>
                         <p>@ Berkeley Discovery Initiative | Feb 2024 - Present</p><br>
-                        <li>Analyze and manage 1200+ listings</li>
-                        <li>Boosted database usage by 50%</li>
-                        <li>Updated for 6500+ users</li>
+                        <li>Analyze 1200+ academic and professional listings while managing/updating the Discovery database</li>
+                        <li>Boosted database usage by 50% through consistent updates and semesterly outreach efforts</li>
+                        <li>Constantly identify pain points for data infrastructure quality improvements for the team and the database's 6500+ users</li>
                     </div>
                 </div>
                 <div class="exp-wrap">
@@ -117,9 +121,11 @@
                     <div class="exp-col-right">
                         <h2>Chief Technology Officer</h2>
                         <p>@ Ighota! Virtual Learning | June 2024 - Present</p><br>
-                        <li>Closely maintain communication with our eight educators</li>
-                        <li>Designed and programmed new website for 2024 launch</li>
-                        <li>Previously VP since June 2021, transitioning to overseeing technology operations</li>
+                        <li>Closely maintain active communication with our 8+ educators, ensuring effective collaboration with our partnered Nigerian institutions overseas</li>
+                        <li>Designed and programmed the new website redesign for the official 2024 launch</li>
+                        <li>Previously VP since founding in June 2021; worked on launching organization to partnered schools; outreached to several educational organizations;
+                            designed numerous graphic review sheets for over 600 students in Nigeria
+                        </li>
                     </div>
                 </div>
                 <div class="exp-wrap">
@@ -129,9 +135,9 @@
                     <div class="exp-col-right">
                         <h2>Web Developer & Designer</h2>
                         <p>@ Innovative Design at Berkeley | Sep 2023 - May 2024</p><br>
-                        <li>Designed graphic UX redesigns of Berkeley Undergraduate website</li>
-                        <li>Created mobile application version of the website</li>
-                        <li>Worked to translate mock-ups into functional web pages for ClinicConnects</li>
+                        <li>Designed graphic UX redesigns of the Berkeley Undergraduate website, prioritizing intuitive interfaces and aesthetic appeal</li>
+                        <li>Created a mobile application version of the website on Figma to consolidate Berkeley's massive resource pool</li>
+                        <li>Designed and programmed functional web pages through a React.js framework for the team's semester client, ClinicConnects</li>
                     </div>
                 </div>
                 <div class="exp-wrap">
@@ -141,23 +147,11 @@
                     <div class="exp-col-right">
                         <h2>Web Officer</h2>
                         <p>@ Taiwanese American Student Association | Dec 2022 - Dec 2023</p><br>
-                        <li>Debugged Linux server issues and clean database</li>
-                        <li>Programmed interactive website features</li>
-                        <li>Monitor website traffic to drive decision making</li>
+                        <li>Routinely debugged server issues and cleaned the website database; mentored three members, ensuring consistency in web management</li>
+                        <li>Programmed interactive website features using HTML, CSS, and JavaScript interested in Taiwanese culture</li>
+                        <li>Monitored website traffic to drive decision making and to align with our organization's vision</li>
                     </div>
                 </div>
-                    
-                <!--
-                <div class="experience-list">
-                    <div>
-                        <h2>Database Assistant</h2>
-                        <p>@ Berkeley Discovery Initiative | Feb 2024 - Present</p><br>
-                        <li>Analyze and manage 1200+ listings</li>
-                        <li>Boosted database usage by 50%</li>
-                        <li>Updated for 6500+ users</li>
-                    </div>
-                -->
-
             </div>
         </div>
 
@@ -167,38 +161,38 @@
             <div class="container">
                 <h1 class="sub-title">Projects</h1>
                 <!--Actual project descriptions-->
-                <div class="experience-list">
+                <div class="project-list">
                     <div>
                         <i class="fa-sharp fa-solid fa-crop"></i>
                         <h2>Ighota! Website Redesign</h2>
-                        <p>HTML | CSS | JavaScript | jQuery | React.js</p><br>
-                        <li>Created Figma website redesigns</li>
-                        <li>Applied HTML, CSS, JavaScript</li>
-                        <li>Hosting all videos from our educators</li>
+                        <p>HTML | CSS | JavaScript | React.js</p><br>
+                        <li>Designed Figma web page mock-ups, aligning with student needs</li>
+                        <li>Developed an interactive hub for students to access our resources</li>
+                        <li>Actively hosting 100+ review STEM videos for students aiming to take the WAEC exam</li>
                     </div>
                     <div>
                         <i class="fa-solid fa-chart-simple"></i>
                         <h2>Outreach Data Analysis</h2>
                         <p>Python | Pandas | JupyterLab</p><br>
-                        <li>Analyzed user frequency and activity</li>
-                        <li>Utilized EDA through data modeling</li>
-                        <li>Standardized methodology for admin</li>
+                        <li>Analyzed user frequency/activity using Pandas in JupyterLab</li>
+                        <li>Utilized EDA and quantified key insights, visualizing a 200% boost in database activity from in-person events</li>
+                        <li>Standardized a methodology for analyzing future outreach efforts and funding allocation</li>
                     </div>
                     <div>
                         <i class="fa-solid fa-code"></i>
                         <h2>2D-World Game</h2>
                         <p>Java</p><br>
-                        <li>Java data algorithms</li>
-                        <li>Engaging UI</li>
-                        <li>Unique user encounters</li>
+                        <li>Employed Java data algorithms and structures to generate random 2D tile-based worlds</li>
+                        <li>Designed and programmed an engaging UI for users</li>
+                        <li>Unique user encounters, combat menus, level progression, bar tracking</li>
                     </div>
                     <div>
                         <i class="fa-solid fa-laptop"></i>
-                        <h2>Email Binary Classifier</h2>
+                        <h2>Email-type Binary Classifier</h2>
                         <p>Python | Pandas | Sklearn</p><br>
-                        <li>Modeled feature engineering</li>
-                        <li>Utilized Sklearn</li>
-                        <li>86% Training Accuracy</li>
+                        <li>Modeled feature engineering with labeled text datasets and python functions</li>
+                        <li>Utilized Sklearn to perform logistic regression on email datasets to minimize overfitting with classifier</li>
+                        <li>Concluded with a 86% Training Accuracy with the binary classfier</li>
                     </div>
                 </div>
 
@@ -212,28 +206,28 @@
                     <div class="work">
                         <img src="Images/peaksky.jpeg">
                         <div class="layer">
-                            <h3><i class="fa-solid fa-location-pin"></i> Grizzly Peak, Berkeley, CA</h3>
+                            <h3><i class="fa-solid fa-location-pin"></i>  Grizzly Peak, Berkeley, CA</h3>
                             <p>04/2024</p>
                         </div>
                     </div>
                     <div class="work">
                         <img src="Images/carmelphoto.jpeg">
                         <div class="layer">
-                            <h3><i class="fa-solid fa-location-pin"></i> Carmel By the Sea, CA</h3>
+                            <h3><i class="fa-solid fa-location-pin"></i>  Carmel By the Sea, CA</h3>
                             <p>02/2024</p>
                         </div>
                     </div>
                     <div class="work">
                         <img src="Images/taiwan.jpeg">
                         <div class="layer">
-                            <h3><i class="fa-solid fa-location-pin"></i> Tamsui River, TP, Taiwan</h3>
+                            <h3><i class="fa-solid fa-location-pin"></i>  Tamsui River, TP, Taiwan</h3>
                             <p>12/2023</p>
                         </div>
                     </div>
                     <div class="work">
                         <img src="Images/sfflowers.jpeg">
                         <div class="layer">
-                            <h3><i class="fa-solid fa-location-pin"></i> Golden Gate Park, SF, CA</h3>
+                            <h3><i class="fa-solid fa-location-pin"></i>  Golden Gate Park, SF, CA</h3>
                             <p>08/2023</p>
                             <!--<a href='#'><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
                             this was the old arrow symbol to link somewhere-->
@@ -247,33 +241,17 @@
         </div>
 
 
-        <!------------Contact-------------->
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me!</h1>
-                        <p>Feel free to send me a message about any opportunities, questions, or
-                            if you want to connect.
-                        </p>
-                        <p><i class="fa-solid fa-paper-plane"></i> echang22@berkeley.edu</p> 
-                        <!--icon to send you back to the top of page-->
-                        <a href="#header">
-                            <p><i class="fa-solid fa-arrow-up"></i> Back to Top</p>
-                        </a>
-                    </div>
-
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Full Name" required>
-                            <input type="email" name="Email" placeholder="Email" required>
-                            <textarea name="Message" rows="6" placeholder="Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
-                </div>
+        <!------------Contact Section - only blue arrow -------------->
+        <div class="arrow-container">
+            <div class="contact-left">
+                <!--icon to send you back to the top of page-->
+                <a href="#home">
+                    <p><i class="fa-solid fa-arrow-up"></i></p>
+                </a>
             </div>
+        </div>
+        
+        <div id="contact">
             <div class="copyright">
                 <p>Made by Ethan Chang</p>
             </div>

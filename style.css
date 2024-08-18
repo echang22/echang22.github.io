@@ -14,12 +14,48 @@ body {
     color: #fff;
 }
 
-#header {
+#home {
     width: 100%;
-    height: 100vh;
-    background-image: url(Images/portraitphoto.jpeg);
+    height: 90vh;
     background-size: cover;
     background-position: center;
+}
+
+@keyframes slideInFromSide { /* allows text to slide in upon startup */
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes cursorEffect {
+    from {
+        border-right: 2px solid transparent;
+    }
+    to {
+        border-right: 2px solid black;
+    }
 }
 
 /* icons underneath the header */
@@ -29,9 +65,9 @@ body {
 
 .social-icons-header a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 15px;
-    color: #ababab;
+    color: #303030; /* linkedin icon */
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -43,6 +79,7 @@ body {
 
 .container {
     padding: 10px 10%;
+    width: 100%;
 }
 
 nav {
@@ -50,20 +87,21 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .logo {
     width: 140px;
 }
 
-nav ul li {
+nav ul li { /* nav bar text */
     display: inline-block;
     list-style: none;
-    margin: 10px 20px; /* Bottom to top, left to right px */
+    margin: 40px 5px; /* Space from top, space from left px */
 }
 
 nav ul li a {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none; /* Makes sure there is no underline */
     font-size: 20px;
     position: relative;
@@ -87,16 +125,36 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
+    animation: slideInFromSide 1s ease-out;
 }
 
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+    animation: slideInFromSide 2s ease-out;
+}
+
+.header-text h2 {
+    color:#000000;
+    animation: slideInFromSide 3s ease-out;
 }
 
 .header-text h1 span {
     color: #004cff;
 }
+
+.header-text p {
+    color:#000000;
+}
+
+/*---------------new header with pic to side-----------*/
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 125px;
+}
+
 /*---------------about----------------*/
 #about {
     padding: 80px 0;
@@ -109,24 +167,25 @@ nav ul li a:hover::after {
     flex-wrap: wrap;
 }
 
-/*
-.about-col-1 {
-    flex-basis: 20%;
-}
-
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px; /* makes corner of the photo round 
-}
-*/
-
-
 .about-col-1 {
     flex-basis: 50%;
 }
 
+.about-col-1 p i {
+    color:#174cc9;
+    margin-right: 15px;
+}
+
 .about-col-2 {
     flex-basis: 43%;
+}
+
+.about-col-2 img { /* portrait */
+    width: 100%;
+    border-radius: 100px;
+    border: 5px solid #9f9f9f;
+    margin-top: 60px;
+    animation: slideInFromTop 3s ease-out;
 }
 
 .sub-title {
@@ -187,70 +246,6 @@ nav ul li a:hover::after {
     padding: 30px 0;
 }
 
-.experience-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-    /* align-items: center; */
-}
-
-.experience-list div { /* creates a white box around each separate div */
-    background: #ffffff;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px; /* makes boxes round */
-    transition: background 0.5s, transform 0.5s; /* specifies the time in which the box transitions */
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
-}
-
-.experience-list div i { /* increases size of the icons */
-    font-size: 50px;
-    margin-bottom: 30px;
-    color:#000000;
-}
-
-.experience-list div h2 { /* specifies the style of the headings */
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-/* learn more - no need anymore
-.experience-list div a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-*/
-
-.experience-list div h2 {
-    color:#000000;
-}
-
-.experience-list div p {
-    color:#000000;
-    font-size: 15px;
-    flex-basis: 60%;
-}
-
-.experience-list div li {
-    color:#000000;
-}
-
-.experience-list div:hover {
-    background: #b7cdff;
-    transform: translateY(-10px); /* moves the box up or Y coordinates by 10px */
-}
-
-.experience-list img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* new wraps around EXPERIENCE blocks */
 
 .exp-wrap {
@@ -287,19 +282,20 @@ nav ul li a:hover::after {
     color:#000000;
 }
 
-.exp-wrap div p {
-    color:#000000;
-    font-size: 15px;
+.exp-wrap div p { /* color of experience sub-headings */
+    color:#3a3a3a;
+    font-size: 16px;
     flex-basis: 60%;
 }
 
-.exp-wrap div li {
+.exp-wrap div li { /* color of experience descriptions */
     color:#000000;
+    font-size: 14px;
 }
 
 .exp-wrap:hover {
     background: #ffffff;
-    transform: translateY(-10px); /* moves the box up or Y coordinates by 10px */
+    transform: translateY(-15px); /* moves the box up or Y coordinates by 10px */
 }
 
 .exp-wrap img {
@@ -316,7 +312,70 @@ nav ul li a:hover::after {
 #portfolio {
     padding: 50px 0; /* 50 px padding from the top and bottom */
 }
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    /* align-items: center; */
+}
 
+.project-list div { /* creates a white box around each separate div */
+    background: #ffffff;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px; /* makes boxes round */
+    transition: background 0.5s, transform 0.5s; /* specifies the time in which the box transitions */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-list div i { /* increases size of the icons */
+    font-size: 45px;
+    margin-bottom: 30px;
+    color:#000000;
+}
+
+.project-list div h2 { /* specifies the style of the headings */
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* learn more - no need anymore
+.project-list div a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+*/
+
+.project-list div h2 {
+    color:#000000;
+}
+
+.project-list div p { /* project sub-headings */
+    color:#000000;
+    font-size: 16px;
+    flex-basis: 60%;
+}
+
+.project-list div li { /* project descriptions */
+    color:#000000;
+    font-size: 14px;
+}
+
+.project-list div:hover {
+    background: #b7cdff;
+    transform: translateY(-20px); /* moves the box up or Y coordinates by 10px */
+}
+
+.project-list img {
+    max-width: 100%;
+    height: auto;
+}
 .photography-title h2 {
     color:#000000;
 }
@@ -435,7 +494,8 @@ nav ul li a:hover::after {
 .contact-left p i {
     color:#174cc9;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .contact p i {
@@ -446,7 +506,11 @@ nav ul li a:hover::after {
     padding: 50px;
     color:rgb(0, 0, 0);
 }
-
+.arrow-container {
+    padding: 5px 5%;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
 .social-icons {
     margin-top: 30px;
 }
@@ -514,7 +578,7 @@ nav .fa-solid {
     display: none;
 }
 @media only screen and (max-width: 600px) {
-    #header {
+    #home {
         background-image: url(Images/phonebackgroundtemplate.jpeg);
     }
     .header-text {
@@ -561,6 +625,9 @@ nav .fa-solid {
     }
     .about-col-2 {
         font-size: 14px;
+    }
+    .about-col-2 img {
+        display: none;
     }
     .tab-links {
         font-size: 16px;
