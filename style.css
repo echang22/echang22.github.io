@@ -78,7 +78,7 @@ body {
 }
 
 .container {
-    padding: 10px 10%;
+    padding: 10px 15%;
     width: 100%;
 }
 
@@ -87,7 +87,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 
 .logo {
@@ -147,12 +147,12 @@ nav ul li a:hover::after {
     color:#000000;
 }
 
-/*---------------new header with pic to side-----------*/
+/*---------------new header with pic to the side-----------*/
 .header-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 125px;
+    margin-top: 100px;
 }
 
 /*---------------about----------------*/
@@ -185,6 +185,7 @@ nav ul li a:hover::after {
     border-radius: 100px;
     border: 4px solid #9b9b9b;
     margin-top: 60px;
+    animation: slideInFromTop 2s ease-in;
 }
 
 .sub-title {
@@ -311,6 +312,7 @@ nav ul li a:hover::after {
 #portfolio {
     padding: 50px 0; /* 50 px padding from the top and bottom */
 }
+
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -341,7 +343,7 @@ nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 
-/* learn more - no need anymore
+/* learn more button - no need anymore
 .project-list div a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -375,6 +377,7 @@ nav ul li a:hover::after {
     max-width: 100%;
     height: auto;
 }
+
 .photography-title h2 {
     color:#000000;
 }
@@ -478,6 +481,7 @@ nav ul li a:hover::after {
 .contact-left a {
     text-decoration: none;
 }
+
 .contact-right {
     flex-basis: 66%;
 }
@@ -505,11 +509,13 @@ nav ul li a:hover::after {
     padding: 50px;
     color:rgb(0, 0, 0);
 }
+
 .arrow-container {
     padding: 5px 5%;
     margin-bottom: 20px;
     margin-top: -50px;
 }
+
 .social-icons {
     margin-top: 30px;
 }
@@ -568,17 +574,19 @@ form input, form textarea {
     color:#000000;
 }
 
-.copyright i {
-    color: #174cc9 /* makes the heart red */
-}
-
 /*---------CSS for Small Screen-------------*/
 nav .fa-solid {
     display: none;
 }
 @media only screen and (max-width: 600px) {
     #home {
-        background-image: url(Images/phonebackgroundtemplate.jpeg);
+        background-image: url(Images/sfflowers.jpeg);
+    }
+    .row {
+        margin-top: 150px;
+    }
+    .header-container {
+        margin-top: 300px;
     }
     .header-text {
         margin-top: 100%;
