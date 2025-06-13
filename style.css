@@ -79,6 +79,7 @@ body {
 
 .container {
     padding: 10px 15%;
+    max-width: 1500px;
     width: 100%;
 }
 
@@ -111,7 +112,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 2px;
-    background: #004cff;
+    background: #002f9d;
     position: absolute;
     left: 0;
     bottom: 0.1px;
@@ -140,7 +141,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: #004cff;
+    color: #002f9d;
 }
 
 .header-text p {
@@ -181,8 +182,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 img { /* portrait */
-    width: 100%;
-    border-radius: 100px;
+    width: 80%; /* size of the portrait photo */
+    border-radius: 50%;
     border: 4px solid #9b9b9b;
     margin-top: 60px;
     animation: slideInFromTop 2s ease-in;
@@ -203,7 +204,7 @@ nav ul li a:hover::after {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
-    cursor: pointer; /* makes the cursor a pointer when hovering over "SKills, etc." */
+    cursor: pointer; /* makes the cursor a pointer when hovering over "Skills, etc." */
     position: relative;
 }
 
@@ -211,7 +212,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #174cc9;
+    background: #002f9d;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -228,7 +229,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #174cc9;
+    color: #002f9d;
     font-size: 20px;
 }
 
@@ -283,7 +284,7 @@ nav ul li a:hover::after {
 }
 
 .exp-wrap div p { /* color of experience sub-headings */
-    color:#3a3a3a;
+    color:#161616;
     font-size: 16px;
     flex-basis: 60%;
 }
@@ -580,7 +581,7 @@ nav .fa-solid {
 }
 @media only screen and (max-width: 600px) {
     #home {
-        background-image: url(Images/sfflowers.jpeg);
+        background-image: url(Images/portraitphoto.png);
     }
     .row {
         margin-top: 150px;
