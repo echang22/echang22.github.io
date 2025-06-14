@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
@@ -137,7 +137,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h2 {
-    color:#000000;
+    color:#363636;
     animation: slideInFromSide 3s ease-out;
 }
 
@@ -146,7 +146,7 @@ nav ul li a:hover::after {
 }
 
 .header-text p {
-    color:#000000;
+    color:#363636;
 }
 
 /*---------------new header with pic to the side-----------*/
@@ -160,7 +160,7 @@ nav ul li a:hover::after {
 /*---------------about----------------*/
 #about {
     padding: 80px 0;
-    color: #000000;
+    color: #363636;
 }
 
 .row {
@@ -187,13 +187,14 @@ nav ul li a:hover::after {
     border-radius: 50%;
     border: 4px solid #9b9b9b;
     margin-top: 60px;
+    margin-left: 45px;
     animation: slideInFromTop 2s ease-in;
 }
 
-.sub-title {
-    font-size: 50px;
+.sub-title { /* About Me, Experience, etc. title sizes */
+    font-size: 35px;
     font-weight: 600;
-    color: rgb(0, 0, 0);
+    color: #363636;
 }
 
 .tab-titles {
@@ -260,7 +261,7 @@ nav ul li a:hover::after {
 
 .exp-wrap { /* creates a white box around each separate div */
     background: #ffffff;
-    padding: 40px;
+    padding: 35px; /* padding around text */
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px; /* makes boxes round */
@@ -271,27 +272,27 @@ nav ul li a:hover::after {
 .exp-wrap div i { /* increases size of the icons */
     font-size: 50px;
     margin-bottom: 30px;
-    color:#000000;
+    color:#363636;
 }
 
 .exp-wrap div h2 { /* specifies the style of the headings */
-    font-size: 30px;
+    font-size: 26px; /* size of the position titles */
     font-weight: 500;
     margin-bottom: 15px;
 }
 
 .exp-wrap div h2 {
-    color:#000000;
+    color:#363636;
 }
 
-.exp-wrap div p { /* color of experience sub-headings */
-    color:#161616;
+.exp-wrap div p { /* experience organization name + time period */
+    color:#929292;
     font-size: 16px;
     flex-basis: 60%;
 }
 
-.exp-wrap div li { /* color of experience descriptions */
-    color:#000000;
+.exp-wrap div li { /* experience descriptions */
+    color:#363636;
     font-size: 14px;
 }
 
@@ -336,7 +337,7 @@ nav ul li a:hover::after {
 .project-list div i { /* increases size of the icons */
     font-size: 45px;
     margin-bottom: 30px;
-    color:#000000;
+    color:#363636;
 }
 
 .project-list div h2 { /* specifies the style of the headings */
@@ -356,17 +357,17 @@ nav ul li a:hover::after {
 */
 
 .project-list div h2 {
-    color:#000000;
+    color:#363636;
 }
 
 .project-list div p { /* project sub-headings */
-    color:#000000;
+    color:#929292;
     font-size: 16px;
     flex-basis: 60%;
 }
 
 .project-list div li { /* project descriptions */
-    color:#000000;
+    color:#363636;
     font-size: 14px;
 }
 
@@ -381,7 +382,7 @@ nav ul li a:hover::after {
 }
 
 .photography-title h2 {
-    color:#000000;
+    color:#363636;
 }
 
 .work-list {
