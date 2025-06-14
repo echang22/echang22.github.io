@@ -116,12 +116,12 @@ nav ul li a::after {
     background: #002f9d;
     position: absolute;
     left: 0;
-    bottom: 0.1px;
+    bottom: 0px;
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 85%;
 }
 
 .header-text {
