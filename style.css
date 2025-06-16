@@ -109,7 +109,7 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a::after {
+nav ul li a::after { /* the line appearing after hovering over about, experience, etc. */
     content: '';
     width: 0;
     height: 2px;
@@ -121,7 +121,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 85%;
+    width: 85%; /* width of line */
 }
 
 .header-text {
@@ -147,6 +147,18 @@ nav ul li a:hover::after {
 
 .header-text p {
     color:#363636;
+}
+
+.cursor { /* blinking line for typewriter effect */
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 0.7s steps(1) infinite;
+    color:#363636
+}
+
+@keyframes blink { /* blinking line animation for typewriter*/
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /*---------------new header with pic to the side-----------*/
