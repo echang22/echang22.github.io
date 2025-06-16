@@ -29,12 +29,14 @@
                 <div class="header-container">
                     <div class="about-col-1">
                         <div class="header-text">
-                            <p>Student | Developer | Designer</p>
-                            <h1><span>Ethan C.</span>
+                            <p>Software &bull; Data &bull; Design</p>
+                            <h1><span id="typewriter"></span><span class="cursor">|</span></h1>
+                            <!--<h1><span>Ethan C.</span>-->
                             </h1>
                             <h2>DS, CS @ UC Berkeley</h2>
                             <div class="social-icons-header">
                                 <a href="https://linkedin.com/in/ethan-chang2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/echang22" target="_blank"><i class="fa-brands fa-square-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -240,7 +242,7 @@
         </div>
 
 
-        <!------------Contact Section - only blue arrow -------------->
+        <!------------Contact Section - only blue arrow shows -------------->
         <div class="arrow-container">
             <div class="contact-left">
                 <!--icon to send you back to the top of page-->
@@ -287,6 +289,72 @@
                 sidemenu.style.right = "-200px";
             }
             
+        </script>
+
+        <!-------Typewriter effect------->
+
+        <script>
+            
+            const intro = "Hi, I'm";
+            const roles = [" a Student :)", " a Developer :O", " a Designer :D", " Ethan!"]
+            const typewriter = document.getElementById("typewriter")
+            const cursor = document.querySelector(".cursor")
+
+            let phase = "intro";
+            let introIndex = 0;
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                if (phase === "intro") {
+                    if (introIndex < intro.length) {
+                        typewriter.textContent += intro.charAt(introIndex);
+                        introIndex++;
+                        setTimeout(type, 100); // typing speed
+                    }
+                    else {
+                        phase = "role";
+                        setTimeout(type, 500);
+                    }
+                }
+                else if (phase === "role") {
+                    const currentRole = roles[roleIndex];
+                    const fullText = intro + currentRole;
+
+                    if (!isDeleting) {
+                        typewriter.textContent = intro + currentRole.substring(0, charIndex);
+                        charIndex++;
+                        if (charIndex <= currentRole.length) {
+                            setTimeout(type, 100);
+                        }
+                        else {
+                            if (roleIndex === roles.length - 1) { // final role, stop animation
+                                cursor.style.display = "none";
+                                return;
+                            }
+                            setTimeout(() => {
+                                isDeleting = true;
+                                type();
+                            }, 1000);
+                        }
+                    }
+                    else {
+                        typewriter.textContent = intro + currentRole.substring(0, charIndex);
+                        charIndex--;
+                        if (charIndex >= 0) {
+                            setTimeout(type, 50);
+                        }
+                        else {
+                            isDeleting = false;
+                            roleIndex++;
+                            setTimeout(type, 500);
+                        }
+                    }
+                }
+            }
+            window.onload = type;
+
         </script>
 
         <!--------Script to send submitted info from website to a google sheet-->
